@@ -1,0 +1,67 @@
+/* ============================================
+   INVENTORY PAGE
+   ============================================ */
+
+.inventory-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Warning Banner */
+.warning-banner {
+    background: var(--warning-bg);
+    border: 1px solid #fcd34d;
+    padding: 14px 20px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #92400e;
+}
+
+.warning-banner i {
+    color: var(--warning);
+    font-size: 18px;
+}
+
+.warning-banner a {
+    color: #92400e;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Status Badges for Inventory */
+.status-badge {
+    display: inline-flex;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status-badge.status-in-stock {
+    background: var(--success-bg);
+    color: #065f46;
+}
+
+.status-badge.status-with-customer {
+    background: var(--info-bg);
+    color: #1e40af;
+}
+
+.status-badge.status-with-driver {
+    background: #ede9fe;
+    color: #5b21b6;
+}
+
+.status-badge.status-damaged {
+    background: var(--danger-bg);
+    color: #991b1b;
+}
