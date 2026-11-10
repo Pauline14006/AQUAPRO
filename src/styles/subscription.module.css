@@ -1,0 +1,230 @@
+/* Subscription page layout */
+.order-container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 24px;
+    align-items: start;
+}
+
+.order-summary-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 24px;
+}
+
+.order-summary-sidebar .card {
+    margin-bottom: 0;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+/* Modal Box */
+.modal-box {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 520px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-box .modal-icon {
+    text-align: center;
+    font-size: 56px;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.modal-box h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a2b3c;
+    margin-bottom: 20px;
+}
+
+.modal-box .summary-block {
+    background: #f7f9fc;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+}
+
+.modal-box .summary-block h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #5f6b7a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.modal-box .summary-block p {
+    font-size: 14px;
+    color: #3a4c5e;
+    margin: 3px 0;
+    line-height: 1.5;
+}
+
+.modal-box .summary-block strong {
+    color: #1a2b3c;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.modal-actions .btn {
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+}
+
+.modal-actions .btn-primary {
+    background: #0066cc;
+    color: white;
+}
+
+.modal-actions .btn-primary:hover {
+    background: #0052a3;
+}
+
+.modal-actions .btn-outline {
+    background: white;
+    color: #3a4c5e;
+    border: 2px solid #d0d9e4;
+}
+
+.modal-actions .btn-outline:hover {
+    background: #f0f5ff;
+    border-color: #0066cc;
+}
+
+/* Delivery preference option */
+.delivery-preference-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: #f8fafd;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #e9eff4;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.delivery-preference-option:hover {
+    border-color: #0066cc;
+}
+
+.delivery-preference-option:has(input:checked) {
+    border-color: #0066cc;
+    background: #e6f2ff;
+}
+
+/* Frequency options */
+.freq-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 2px solid #dce3eb;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.freq-option:hover {
+    border-color: #0066cc;
+}
+
+.freq-option:has(input:checked) {
+    border-color: #0066cc;
+    background: #e6f2ff;
+}
+
+/* Day checkboxes */
+.day-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border: 2px solid #dce3eb;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.day-chip:has(input:checked) {
+    border-color: #0066cc;
+    background: #e6f2ff;
+    color: #0066cc;
+}
+
+/* Card header with icon on right */
+.card-header.icon-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-header.icon-right h3 {
+    order: 1;
+}
+
+.card-header.icon-right i {
+    order: 2;
+    margin-left: auto;
+}
+
+@media (max-width: 992px) {
+    .order-container {
+        grid-template-columns: 1fr;
+    }
+    .order-summary-sidebar {
+        position: static;
+    }
+}
