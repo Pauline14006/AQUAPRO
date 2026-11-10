@@ -1,0 +1,316 @@
+/* ============================================
+   DRIVER MOBILE APP
+   ============================================ */
+
+.driver-app {
+    background: var(--gray-100);
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.driver-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Driver Header */
+.driver-header {
+    background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
+    color: var(--white);
+    padding: 20px 16px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.driver-greeting {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.driver-greeting i {
+    font-size: 40px;
+}
+
+.driver-greeting h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.driver-status-text {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.route-summary {
+    display: flex;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 16px;
+    border-radius: var(--radius);
+}
+
+.route-stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+
+/* Deliveries Container */
+.deliveries-container {
+    flex: 1;
+    padding: 16px;
+}
+
+.deliveries-container h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 16px;
+}
+
+/* Delivery Cards */
+.delivery-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.delivery-card.active {
+    border: 2px solid var(--primary);
+}
+
+.delivery-card.completed {
+    opacity: 0.7;
+    background: var(--gray-50);
+}
+
+.delivery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--gray-50);
+}
+
+.delivery-card.active .delivery-header {
+    background: var(--primary-bg);
+}
+
+.stop-number {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray-600);
+}
+
+.delivery-status {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.status-active {
+    background: var(--primary-bg);
+    color: var(--primary);
+}
+
+.status-upcoming {
+    background: var(--gray-100);
+    color: var(--gray-500);
+}
+
+.status-completed {
+    background: var(--success-bg);
+    color: #065f46;
+}
+
+.delivery-body {
+    padding: 16px;
+}
+
+.delivery-body h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 8px;
+}
+
+.address {
+    font-size: 13px;
+    color: var(--gray-500);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.item-tag {
+    background: var(--primary-bg);
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Customer Contact */
+.customer-contact {
+    margin-top: 8px;
+}
+
+.call-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--success);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.call-btn:hover {
+    background: #059669;
+    color: var(--white);
+}
+
+.completed-time {
+    font-size: 12px;
+    color: var(--success);
+}
+
+/* Delivery Actions */
+.delivery-actions {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid var(--gray-100);
+    background: var(--gray-50);
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--radius);
+    border: 2px solid var(--gray-200);
+    background: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: var(--transition);
+    color: var(--gray-700);
+}
+
+.delivered-btn {
+    background: var(--success);
+    color: var(--white);
+    border-color: var(--success);
+}
+
+.delivered-btn:hover {
+    background: #059669;
+}
+
+.unavailable-btn {
+    border-color: var(--warning);
+    color: #92400e;
+}
+
+.unavailable-btn:hover {
+    background: var(--warning-bg);
+}
+
+.photo-btn {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.photo-btn:hover {
+    background: var(--primary-bg);
+}
+
+/* Start Delivery Button */
+.start-delivery-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.start-delivery-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* Completed Section */
+.completed-section {
+    margin-top: 24px;
+}
+
+.section-toggle {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-600);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.completed-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
