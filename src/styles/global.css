@@ -178,14 +178,14 @@ img {
     font-size: 13px;
 }
 
-.btn-nav {
+.nav-menu a.btn-nav {
     background: var(--primary);
     color: var(--white);
     border-radius: var(--radius);
     padding: 8px 20px;
 }
 
-.btn-nav:hover {
+.nav-menu a.btn-nav:hover {
     background: var(--primary-dark);
     color: var(--white);
 }
